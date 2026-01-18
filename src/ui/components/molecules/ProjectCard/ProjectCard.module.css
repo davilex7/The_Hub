@@ -26,8 +26,14 @@
   cursor: grabbing;
 }
 
-.card:focus-within {
+.card:focus-within,
+.card:focus {
   outline: 0.125rem solid var(--color-focus-ring);
+  outline-offset: 0.125rem;
+}
+
+.card:focus-visible {
+  outline: 0.125rem solid var(--color-primary-500);
   outline-offset: 0.125rem;
 }
 

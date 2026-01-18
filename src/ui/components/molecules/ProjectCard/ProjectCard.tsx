@@ -35,6 +35,8 @@ export const ProjectCard = forwardRef<HTMLElement, ProjectCardProps>(
 
     // Track pointer start position to detect drag vs click
     const pointerStartRef = useRef<{ x: number; y: number } | null>(null);
+    // Track if we're in a drag operation
+    const hasDraggedRef = useRef(false);
 
     const style = {
       transform: CSS.Transform.toString(transform),
@@ -61,34 +63,33 @@ export const ProjectCard = forwardRef<HTMLElement, ProjectCardProps>(
 
     const handlePointerDown = (e: React.PointerEvent<HTMLElement>): void => {
       pointerStartRef.current = { x: e.clientX, y: e.clientY };
+      hasDraggedRef.current = false;
       // Call the original listener from dnd-kit
       listeners?.onPointerDown?.(e as unknown as React.PointerEvent<Element>);
     };
 
-    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>): void => {
-      // Always prevent if currently dragging
-      if (isDragging) {
-        e.preventDefault();
-        e.stopPropagation();
-        return;
-      }
-
-      // Check if pointer moved beyond threshold (was a drag)
-      if (pointerStartRef.current) {
+    const handlePointerMove = (e: React.PointerEvent<HTMLElement>): void => {
+      // Check if we've moved beyond threshold
+      if (pointerStartRef.current && !hasDraggedRef.current) {
         const deltaX = Math.abs(e.clientX - pointerStartRef.current.x);
         const deltaY = Math.abs(e.clientY - pointerStartRef.current.y);
-
         if (deltaX > DRAG_THRESHOLD || deltaY > DRAG_THRESHOLD) {
-          e.preventDefault();
-          e.stopPropagation();
+          hasDraggedRef.current = true;
         }
       }
-
-      // Reset for next interaction
-      pointerStartRef.current = null;
     };
 
-    // Merge our pointer handler with dnd-kit listeners
+    const handleClick = (): void => {
+      // Only navigate if we didn't drag
+      if (!hasDraggedRef.current && !isDragging) {
+        window.open(project.repositoryUrl.toString(), '_blank', 'noopener,noreferrer');
+      }
+      // Reset for next interaction
+      pointerStartRef.current = null;
+      hasDraggedRef.current = false;
+    };
+
+    // Merge our handlers with dnd-kit listeners
     const mergedListeners = {
       ...listeners,
       onPointerDown: handlePointerDown,
@@ -96,29 +97,31 @@ export const ProjectCard = forwardRef<HTMLElement, ProjectCardProps>(
 
     return (
       <article
+        {...attributes}
+        {...mergedListeners}
+        {...props}
         ref={handleRef}
         style={style}
         className={classNames}
         data-dragging={isDragging || undefined}
-        {...attributes}
-        {...mergedListeners}
-        {...props}
+        aria-label={`${project.name} - Click to view repository`}
+        onClick={handleClick}
+        onPointerMove={handlePointerMove}
+        onKeyDown={(e): void => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            window.open(project.repositoryUrl.toString(), '_blank', 'noopener,noreferrer');
+          }
+        }}
       >
-        <a
-          href={project.repositoryUrl.toString()}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
-          aria-label={`View ${project.name} repository on GitHub`}
-          onClick={handleClick}
-        >
+        <div className={styles.link}>
           <ProjectCardPreview
             src={project.previewImage.toString()}
             alt={`Preview of ${project.name}`}
             type={project.previewType}
           />
           <ProjectCardContent project={project} />
-        </a>
+        </div>
       </article>
     );
   }
