@@ -4,7 +4,7 @@
  */
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { forwardRef, useEffect, useRef, type HTMLAttributes } from 'react';
+import { forwardRef, useRef, type HTMLAttributes } from 'react';
 
 import type { Project } from '../../../../core/domain/entities';
 import styles from './ProjectCard.module.css';
@@ -15,6 +15,9 @@ interface ProjectCardProps extends Omit<HTMLAttributes<HTMLElement>, 'id'> {
   readonly project: Project;
   readonly isDraggingDisabled?: boolean;
 }
+
+// Minimum distance in pixels to consider it a drag, not a click
+const DRAG_THRESHOLD = 5;
 
 export const ProjectCard = forwardRef<HTMLElement, ProjectCardProps>(
   function ProjectCard({ project, isDraggingDisabled = false, className, ...props }, ref) {
@@ -30,21 +33,8 @@ export const ProjectCard = forwardRef<HTMLElement, ProjectCardProps>(
       disabled: isDraggingDisabled,
     });
 
-    // Track if a drag just ended to prevent click navigation
-    const wasDraggingRef = useRef(false);
-
-    useEffect(() => {
-      if (isDragging) {
-        wasDraggingRef.current = true;
-      } else if (wasDraggingRef.current) {
-        // Reset after a short delay to allow click event to check it
-        const timeoutId = setTimeout(() => {
-          wasDraggingRef.current = false;
-        }, 100);
-        return () => clearTimeout(timeoutId);
-      }
-      return undefined;
-    }, [isDragging]);
+    // Track pointer start position to detect drag vs click
+    const pointerStartRef = useRef<{ x: number; y: number } | null>(null);
 
     const style = {
       transform: CSS.Transform.toString(transform),
@@ -69,12 +59,39 @@ export const ProjectCard = forwardRef<HTMLElement, ProjectCardProps>(
       }
     };
 
+    const handlePointerDown = (e: React.PointerEvent<HTMLElement>): void => {
+      pointerStartRef.current = { x: e.clientX, y: e.clientY };
+      // Call the original listener from dnd-kit
+      listeners?.onPointerDown?.(e as unknown as React.PointerEvent<Element>);
+    };
+
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>): void => {
-      // Prevent navigation if we just finished dragging
-      if (wasDraggingRef.current || isDragging) {
+      // Always prevent if currently dragging
+      if (isDragging) {
         e.preventDefault();
         e.stopPropagation();
+        return;
       }
+
+      // Check if pointer moved beyond threshold (was a drag)
+      if (pointerStartRef.current) {
+        const deltaX = Math.abs(e.clientX - pointerStartRef.current.x);
+        const deltaY = Math.abs(e.clientY - pointerStartRef.current.y);
+
+        if (deltaX > DRAG_THRESHOLD || deltaY > DRAG_THRESHOLD) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }
+
+      // Reset for next interaction
+      pointerStartRef.current = null;
+    };
+
+    // Merge our pointer handler with dnd-kit listeners
+    const mergedListeners = {
+      ...listeners,
+      onPointerDown: handlePointerDown,
     };
 
     return (
@@ -84,7 +101,7 @@ export const ProjectCard = forwardRef<HTMLElement, ProjectCardProps>(
         className={classNames}
         data-dragging={isDragging || undefined}
         {...attributes}
-        {...listeners}
+        {...mergedListeners}
         {...props}
       >
         <a
