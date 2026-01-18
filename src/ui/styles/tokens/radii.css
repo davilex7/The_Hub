@@ -1,0 +1,22 @@
+/* Border Radius Design Tokens
+ * Consistent rounding using relative units
+ */
+
+:root {
+  --radius-none: 0;
+  --radius-xs: 0.125rem;  /* 2px */
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-2xl: 1.5rem;   /* 24px */
+  --radius-3xl: 2rem;     /* 32px */
+  --radius-full: 9999rem; /* Pill/Circle */
+
+  /* Semantic radii */
+  --radius-card: var(--radius-lg);
+  --radius-button: var(--radius-md);
+  --radius-input: var(--radius-md);
+  --radius-tag: var(--radius-sm);
+  --radius-avatar: var(--radius-full);
+}

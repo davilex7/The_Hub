@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" fill="none">
+  <rect width="400" height="225" fill="#f8fafc"/>
+  <rect x="20" y="20" width="115" height="185" rx="8" fill="#e2e8f0"/>
+  <rect x="145" y="20" width="115" height="185" rx="8" fill="#e2e8f0"/>
+  <rect x="270" y="20" width="115" height="185" rx="8" fill="#e2e8f0"/>
+  <text x="77" y="45" font-family="system-ui" font-size="12" fill="#64748b" text-anchor="middle">To Do</text>
+  <text x="202" y="45" font-family="system-ui" font-size="12" fill="#64748b" text-anchor="middle">In Progress</text>
+  <text x="327" y="45" font-family="system-ui" font-size="12" fill="#64748b" text-anchor="middle">Done</text>
+  <rect x="30" y="60" width="95" height="50" rx="6" fill="white"/>
+  <rect x="30" y="120" width="95" height="40" rx="6" fill="white"/>
+  <rect x="30" y="170" width="95" height="25" rx="6" fill="white"/>
+  <rect x="155" y="60" width="95" height="35" rx="6" fill="white"/>
+  <rect x="155" y="105" width="95" height="55" rx="6" fill="white"/>
+  <rect x="280" y="60" width="95" height="30" rx="6" fill="#dcfce7"/>
+  <rect x="280" y="100" width="95" height="30" rx="6" fill="#dcfce7"/>
+  <rect x="280" y="140" width="95" height="30" rx="6" fill="#dcfce7"/>
+  <circle cx="300" cy="75" r="8" fill="#22c55e"/>
+  <circle cx="300" cy="115" r="8" fill="#22c55e"/>
+  <circle cx="300" cy="155" r="8" fill="#22c55e"/>
+</svg>

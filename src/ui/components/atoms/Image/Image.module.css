@@ -1,0 +1,46 @@
+/* Image Atom Styles */
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Aspect Ratios */
+.aspect1x1 {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect4x3 {
+  aspect-ratio: 4 / 3;
+}
+
+.aspect16x9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect21x9 {
+  aspect-ratio: 21 / 9;
+}
+
+/* Object Fit */
+.fitCover {
+  object-fit: cover;
+}
+
+.fitContain {
+  object-fit: contain;
+}
+
+.fitFill {
+  object-fit: fill;
+}
+
+.fitNone {
+  object-fit: none;
+}
+
+/* Rounded */
+.rounded {
+  border-radius: var(--radius-md);
+}

@@ -1,0 +1,28 @@
+/* Breakpoint Design Tokens
+ * Values defined in em for media queries (relative to user's font settings)
+ * These custom properties are for documentation reference
+ * Use the actual em values in media queries
+ *
+ * Usage in media queries:
+ * @media (min-width: 40em) { } -- sm: 640px
+ * @media (min-width: 48em) { } -- md: 768px
+ * @media (min-width: 64em) { } -- lg: 1024px
+ * @media (min-width: 80em) { } -- xl: 1280px
+ * @media (min-width: 96em) { } -- 2xl: 1536px
+ */
+
+:root {
+  /* Breakpoint reference values (CSS custom props can't be used in media queries) */
+  --breakpoint-sm: 40em;   /* 640px / 16 = 40em */
+  --breakpoint-md: 48em;   /* 768px / 16 = 48em */
+  --breakpoint-lg: 64em;   /* 1024px / 16 = 64em */
+  --breakpoint-xl: 80em;   /* 1280px / 16 = 80em */
+  --breakpoint-2xl: 96em;  /* 1536px / 16 = 96em */
+
+  /* Container max widths at breakpoints */
+  --container-sm: 38rem;   /* 608px */
+  --container-md: 46rem;   /* 736px */
+  --container-lg: 62rem;   /* 992px */
+  --container-xl: 78rem;   /* 1248px */
+  --container-2xl: 90rem;  /* 1440px */
+}

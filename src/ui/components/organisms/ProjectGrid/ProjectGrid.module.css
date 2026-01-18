@@ -1,0 +1,41 @@
+/* ProjectGrid Organism Styles
+ * Masonry layout using CSS columns
+ */
+
+.grid {
+  column-count: 1;
+  column-gap: var(--space-card-gap);
+  padding: var(--space-4);
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 40em) {
+  .grid {
+    column-count: 2;
+    padding: var(--space-5);
+  }
+}
+
+/* Small desktop: 3 columns */
+@media (min-width: 64em) {
+  .grid {
+    column-count: 3;
+    padding: var(--space-6);
+  }
+}
+
+/* Large desktop: 4 columns */
+@media (min-width: 80em) {
+  .grid {
+    column-count: 4;
+    padding: var(--space-8);
+  }
+}
+
+/* Extra large screens: maintain 4 columns but add more padding */
+@media (min-width: 96em) {
+  .grid {
+    max-width: var(--container-2xl);
+    margin-inline: auto;
+  }
+}

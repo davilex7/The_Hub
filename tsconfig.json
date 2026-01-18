@@ -1,0 +1,38 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "resolveJsonModule": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@core/*": ["src/core/*"],
+      "@infrastructure/*": ["src/infrastructure/*"],
+      "@ui/*": ["src/ui/*"],
+      "@config/*": ["src/config/*"],
+      "@data/*": ["src/data/*"]
+    }
+  },
+  "include": ["src/**/*", "env.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}

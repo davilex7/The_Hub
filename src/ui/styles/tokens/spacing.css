@@ -1,0 +1,47 @@
+/* Spacing Design Tokens
+ * Consistent scale based on rem units
+ * All values relative to root font size (typically 16px)
+ */
+
+:root {
+  /* Core spacing scale */
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4px at 16px base */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.5rem;    /* 24px */
+  --space-6: 2rem;      /* 32px */
+  --space-7: 3rem;      /* 48px */
+  --space-8: 4rem;      /* 64px */
+  --space-9: 6rem;      /* 96px */
+  --space-10: 8rem;     /* 128px */
+  --space-11: 12rem;    /* 192px */
+  --space-12: 16rem;    /* 256px */
+
+  /* Semantic spacing */
+  --space-inline-xs: var(--space-1);
+  --space-inline-sm: var(--space-2);
+  --space-inline-md: var(--space-4);
+  --space-inline-lg: var(--space-6);
+  --space-inline-xl: var(--space-8);
+
+  --space-stack-xs: var(--space-1);
+  --space-stack-sm: var(--space-2);
+  --space-stack-md: var(--space-4);
+  --space-stack-lg: var(--space-6);
+  --space-stack-xl: var(--space-8);
+
+  /* Layout spacing */
+  --space-page-gutter: clamp(var(--space-4), 5vw, var(--space-8));
+  --space-section: clamp(var(--space-6), 8vh, var(--space-10));
+  --space-container-max: 90rem;
+
+  /* Component-specific spacing */
+  --space-card-padding: var(--space-4);
+  --space-card-gap: var(--space-4);
+  --space-button-padding-x: var(--space-4);
+  --space-button-padding-y: var(--space-2);
+  --space-input-padding-x: var(--space-3);
+  --space-input-padding-y: var(--space-2);
+}
