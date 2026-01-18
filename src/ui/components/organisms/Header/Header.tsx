@@ -11,6 +11,11 @@ export function Header(): JSX.Element {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.brand}>
+          <img
+            src="/logo.png"
+            alt="The Hub logo"
+            className={styles.logoImage}
+          />
           <Text as="span" variant="h5" className={styles.logo}>
             {APP_CONFIG.siteName}
           </Text>

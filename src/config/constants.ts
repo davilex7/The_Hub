@@ -8,7 +8,7 @@ export const STORAGE_KEYS = {
 } as const;
 
 export const APP_CONFIG = {
-  siteName: 'Portfolio Dashboard',
+  siteName: 'The Hub',
   siteDescription: 'A showcase of my development projects',
   authorName: 'Developer',
   authorGithub: 'https://github.com/username',
