@@ -27,25 +27,9 @@ export function Header(): JSX.Element {
             target="_blank"
             rel="noopener noreferrer"
             className={styles.navLink}
-            aria-label="GitHub profile"
+            aria-label="GitHub repository"
           >
             <Icon name="github" size="md" />
-          </a>
-          <a
-            href={APP_CONFIG.authorLinkedIn}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.navLink}
-            aria-label="LinkedIn profile"
-          >
-            <Icon name="linkedin" size="md" />
-          </a>
-          <a
-            href={`mailto:${APP_CONFIG.authorEmail}`}
-            className={styles.navLink}
-            aria-label="Send email"
-          >
-            <Icon name="mail" size="md" />
           </a>
         </nav>
       </div>

@@ -23,28 +23,10 @@ export function Footer(): JSX.Element {
             target="_blank"
             rel="noopener noreferrer"
             className={styles.navLink}
-            aria-label="GitHub profile"
+            aria-label="GitHub repository"
           >
             <Icon name="github" size="sm" />
             <span className={styles.linkText}>GitHub</span>
-          </a>
-          <a
-            href={APP_CONFIG.authorLinkedIn}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.navLink}
-            aria-label="LinkedIn profile"
-          >
-            <Icon name="linkedin" size="sm" />
-            <span className={styles.linkText}>LinkedIn</span>
-          </a>
-          <a
-            href={`mailto:${APP_CONFIG.authorEmail}`}
-            className={styles.navLink}
-            aria-label="Send email"
-          >
-            <Icon name="mail" size="sm" />
-            <span className={styles.linkText}>Email</span>
           </a>
         </nav>
       </div>
