@@ -11,9 +11,7 @@ export const APP_CONFIG = {
   siteName: 'The Hub',
   siteDescription: 'A showcase of my development projects',
   authorName: 'Developer',
-  authorGithub: 'https://github.com/username',
-  authorLinkedIn: 'https://linkedin.com/in/username',
-  authorEmail: 'hello@example.com',
+  authorGithub: 'https://github.com/UO291047/The_Hub',
 } as const;
 
 export const DRAG_CONFIG = {

@@ -9,7 +9,8 @@
   break-inside: avoid;
   margin-bottom: var(--space-4);
 
-  transition-property: box-shadow, transform;
+  /* Only transition box-shadow, not transform - dnd-kit handles transform */
+  transition-property: box-shadow;
   transition-duration: var(--duration-normal);
   transition-timing-function: var(--ease-out);
 
@@ -17,9 +18,8 @@
   touch-action: manipulation;
 }
 
-.card:hover {
+.card:hover:not([data-dragging]) {
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(calc(var(--space-1) * -1));
 }
 
 .card:active {
