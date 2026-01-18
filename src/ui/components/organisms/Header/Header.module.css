@@ -1,0 +1,99 @@
+/* Header Organism Styles */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background-color: var(--color-background);
+  border-bottom: 0.0625rem solid var(--color-border);
+
+  /* Glassmorphism effect */
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+}
+
+/* Add semi-transparent background for glassmorphism */
+@supports (backdrop-filter: blur(0.5rem)) {
+  .header {
+    background-color: hsl(0 0% 98% / 0.85);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  @supports (backdrop-filter: blur(0.5rem)) {
+    .header {
+      background-color: hsl(220 20% 8% / 0.85);
+    }
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-2xl);
+  margin-inline: auto;
+  padding: var(--space-3) var(--space-page-gutter);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.logo {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-600),
+    var(--color-secondary-500)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: var(--font-bold);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-md);
+  transition: color var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.navLink:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-gray-100);
+}
+
+.navLink:focus-visible {
+  outline: 0.125rem solid var(--color-focus-ring);
+  outline-offset: 0.125rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navLink:hover {
+    background-color: var(--color-gray-800);
+  }
+}
+
+/* Tablet and up: larger touch targets */
+@media (min-width: 40em) {
+  .container {
+    padding: var(--space-4) var(--space-page-gutter);
+  }
+
+  .nav {
+    gap: var(--space-2);
+  }
+}

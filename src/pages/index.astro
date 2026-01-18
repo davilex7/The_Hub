@@ -1,0 +1,12 @@
+---
+/**
+ * Index Page
+ * Main dashboard page that loads the React Dashboard component
+ */
+import DashboardLayout from '../ui/components/templates/DashboardLayout/DashboardLayout.astro';
+import { Dashboard } from '../ui/components/Dashboard';
+---
+
+<DashboardLayout title="Portfolio Dashboard">
+  <Dashboard client:load />
+</DashboardLayout>

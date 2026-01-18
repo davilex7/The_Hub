@@ -1,0 +1,1 @@
+export { LocalStorageOrderPersistence } from './LocalStorageOrderPersistence';

@@ -1,0 +1,16 @@
+/* TechnologyBadge Molecule Styles */
+
+.badge {
+  transition: background-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.badge:hover {
+  background-color: var(--color-gray-200);
+}
+
+@media (prefers-color-scheme: dark) {
+  .badge:hover {
+    background-color: var(--color-gray-700);
+  }
+}

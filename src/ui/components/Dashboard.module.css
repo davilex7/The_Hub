@@ -1,0 +1,80 @@
+/* Dashboard Component Styles */
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Loading State */
+.loading {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-8);
+}
+
+.spinner {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.1875rem solid var(--color-gray-200);
+  border-top-color: var(--color-primary-500);
+  border-radius: var(--radius-full);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingText {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+/* Error State */
+.error {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-8);
+  text-align: center;
+}
+
+.errorTitle {
+  color: var(--color-error);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+}
+
+.errorMessage {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+/* Empty State */
+.empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}
+
+/* Reduce motion for spinner */
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+    border-top-color: var(--color-primary-300);
+  }
+}
