@@ -4,7 +4,7 @@
  */
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { forwardRef, type HTMLAttributes } from 'react';
+import { forwardRef, useEffect, useRef, type HTMLAttributes } from 'react';
 
 import type { Project } from '../../../../core/domain/entities';
 import styles from './ProjectCard.module.css';
@@ -30,6 +30,22 @@ export const ProjectCard = forwardRef<HTMLElement, ProjectCardProps>(
       disabled: isDraggingDisabled,
     });
 
+    // Track if a drag just ended to prevent click navigation
+    const wasDraggingRef = useRef(false);
+
+    useEffect(() => {
+      if (isDragging) {
+        wasDraggingRef.current = true;
+      } else if (wasDraggingRef.current) {
+        // Reset after a short delay to allow click event to check it
+        const timeoutId = setTimeout(() => {
+          wasDraggingRef.current = false;
+        }, 100);
+        return () => clearTimeout(timeoutId);
+      }
+      return undefined;
+    }, [isDragging]);
+
     const style = {
       transform: CSS.Transform.toString(transform),
       transition,
@@ -53,6 +69,14 @@ export const ProjectCard = forwardRef<HTMLElement, ProjectCardProps>(
       }
     };
 
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>): void => {
+      // Prevent navigation if we just finished dragging
+      if (wasDraggingRef.current || isDragging) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    };
+
     return (
       <article
         ref={handleRef}
@@ -69,12 +93,7 @@ export const ProjectCard = forwardRef<HTMLElement, ProjectCardProps>(
           rel="noopener noreferrer"
           className={styles.link}
           aria-label={`View ${project.name} repository on GitHub`}
-          onClick={(e): void => {
-            // Prevent navigation during drag
-            if (isDragging) {
-              e.preventDefault();
-            }
-          }}
+          onClick={handleClick}
         >
           <ProjectCardPreview
             src={project.previewImage.toString()}
