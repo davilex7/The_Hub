@@ -54,6 +54,61 @@
       "technologies": ["Node.js", "JavaScript", "HTML5", "Tesseract.js", "Google Translate", "Electron", "APIs"],
       "featured": false,
       "createdAt": "2025-04-26"
+    },
+	{
+      "id": "the-hub",
+      "name": "The Hub",
+      "description": "The Hub es un centro de control personal para mostrar y organizar tus proyectos de desarrollo. Como un portfolio interactivo.",
+      "repositoryUrl": "https://github.com/UO291047/The_Hub",
+      "previewImage": "/previews/logo_TH.png",
+      "previewType": "image",
+      "technologies": ["Astro", "React", "TypeScript", "CSS3", "JSON"],
+      "featured": false,
+      "createdAt": "2026-01-18"
+    },
+	{
+      "id": "stream-speed-companion",
+      "name": "Stream Speed Companion",
+      "description": "Controla la velocidad de cualquier video HTML5 que veas.",
+      "repositoryUrl": "https://github.com/UO291047/stream-speed-companion",
+      "previewImage": "/previews/logo_ssc.png",
+      "previewType": "image",
+      "technologies": ["JavaScript", "HTML5", "CSS3"],
+      "featured": false,
+      "createdAt": "2025-04-26"
+    },
+	{
+      "id": "protocolo-tirano",
+      "name": "Protocolo Tirano",
+      "description": "Arbitro digital para determinar el jugador más versatil.",
+      "repositoryUrl": "https://github.com/davilex7/Protocolo-Tirano",
+      "previewImage": "/previews/logo_PT.png",
+      "previewType": "image",
+      "technologies": ["JavaScript", "HTML5", "CSS3", "MongoDB", "Render"],
+      "featured": false,
+      "createdAt": "2025-06-07"
+    },
+	{
+      "id": "pokemon-types-learning",
+      "name": "Pokemon Types Learning",
+      "description": "Aplicación web interactiva diseñada para ayudarte a memorizar y dominar la tabla de tipos Pokemon.",
+      "repositoryUrl": "https://github.com/UO291047/PokemonTypesLearning",
+      "previewImage": "/previews/logo_pokemon.png",
+      "previewType": "image",
+      "technologies": ["JavaScript", "HTML5", "TailwindCSS"],
+      "featured": false,
+      "createdAt": "2025-12-12"
+    },
+	{
+      "id": "chess-opening-learning",
+      "name": "Chess Opening Learning",
+      "description": "Aplicación web interactiva diseñada para ayudarte a dominar las aperturas de ajedrez mediante práctica repetitiva inteligente.",
+      "repositoryUrl": "https://github.com/UO291047/ChessOpeningLearning",
+      "previewImage": "/previews/logo_Chess.png",
+      "previewType": "image",
+      "technologies": ["JavaScript", "HTML5", "TailwindCSS"],
+      "featured": false,
+      "createdAt": "2025-06-07"
     }
   ]
 }
