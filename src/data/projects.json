@@ -14,7 +14,7 @@
 	{
       "id": "translator-on-the-fly",
       "name": "Translator on the Fly",
-      "description": "Translator on the Fly es una extensión para Chrome que permite traducir testo en imágenes en tiempo real.",
+      "description": "Translator on the Fly es una extensión para Chrome que permite traducir texto en imágenes en tiempo real.",
       "repositoryUrl": "https://github.com/UO291047/translator-on-the-fly",
       "previewImage": "/previews/logo_TotF.png",
       "previewType": "image",
@@ -51,7 +51,7 @@
       "repositoryUrl": "https://github.com/UO291047/GlobalEye",
       "previewImage": "/previews/logo_GlobalEye.png",
       "previewType": "image",
-      "technologies": ["Node.js", "JavaScript", "HTML5", "Tesseract.js", "Google Translate", "Electron", "APIs"],
+      "technologies": ["Node.js", "JavaScript", "HTML5", "Tesseract.js", "Electron", "APIs"],
       "featured": false,
       "createdAt": "2025-04-26"
     },
