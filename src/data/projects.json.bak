@@ -1,0 +1,59 @@
+{
+  "projects": [
+    {
+      "id": "vesta-app",
+      "name": "Vesta",
+      "description": "Vesta es una aplicación Android diseñada para tener una lista de la compra online sincronizada en tiempo real. De este modo, todos los cohabitantes de una casa pueden saber siempre lo que deben comprar al pasar por una tienda.",
+      "repositoryUrl": "https://github.com/UO291047/Vesta",
+      "previewImage": "/previews/logo_vesta.png",
+      "previewType": "image",
+      "technologies": ["Android", "Kotlin", "Jetpack Compose", "Firebase", "APIs"],
+      "featured": false,
+      "createdAt": "2026-01-12"
+    },
+	{
+      "id": "translator-on-the-fly",
+      "name": "Translator on the Fly",
+      "description": "Translator on the Fly es una extensión para Chrome que permite traducir testo en imágenes en tiempo real.",
+      "repositoryUrl": "https://github.com/UO291047/translator-on-the-fly",
+      "previewImage": "/previews/logo_TotF.png",
+      "previewType": "image",
+      "technologies": ["JavaScript", "HTML5", "TailwindCSS", "Python", "Service Worker", "Flask", "EasyOCR", "MyMemory"],
+      "featured": false,
+      "createdAt": "2025-04-25"
+    },
+	{
+      "id": "manga-chapter-tracker",
+      "name": "Manga Chapter Tracker",
+      "description": "Manga Chapter Tracker es una aplicación para mantener un registro de los mangas, manhwas o manhuas que lees. Permite actualización automática de los episodios de los mangas registrados.",
+      "repositoryUrl": "https://github.com/UO291047/Manga-Chapter-Tracker",
+      "previewImage": "/previews/logo_manga_tracker.png",
+      "previewType": "image",
+      "technologies": ["NextJS", "TailwindCSS", "ShadCN UI", "TypeScript", "JSON", "WebScraping"],
+      "featured": false,
+      "createdAt": "2025-04-9"
+    },
+	{
+      "id": "series-tracker",
+      "name": "Series Tracker",
+      "description": "Series Tracker es una aplicación para mantener un registro de las series y películas que ves. Permite actualización automática de información e incluye sistema de recomendación y de valoración.",
+      "repositoryUrl": "https://github.com/UO291047/series-tracker",
+      "previewImage": "/previews/logo_series_tracker.png",
+      "previewType": "image",
+      "technologies": ["NextJS", "TailwindCSS", "ShadCN UI", "TypeScript", "JSON", "APIs"],
+      "featured": false,
+      "createdAt": "2025-04-16"
+    },
+	{
+      "id": "global-eye",
+      "name": "GlobalEye",
+      "description": "GlobalEye es una aplicación de escritorio que permite traducir el texto extraido de imágenes de un area seleccionada.",
+      "repositoryUrl": "https://github.com/UO291047/GlobalEye",
+      "previewImage": "/previews/logo_GlobalEye.png",
+      "previewType": "image",
+      "technologies": ["Node.js", "JavaScript", "HTML5", "Tesseract.js", "Google Translate", "Electron", "APIs"],
+      "featured": false,
+      "createdAt": "2025-04-26"
+    }
+  ]
+}
