@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "id": "pdf-to-audiobook",
+      "name": "PDF → Audiolibro",
+      "description": "Script en Python que convierte un PDF de apuntes en un audiolibro narrado como si lo explicara un profesor. Gemini lee cada página (tablas y diagramas incluidos) y genera un guion en prosa natural, que después se convierte en audio con edge-tts o Gemini TTS.",
+      "repositoryUrl": "https://github.com/davilex7/pdf-to-audiobook",
+      "previewImage": "/previews/logo_pdf_audiobook.png",
+      "previewType": "image",
+      "technologies": [
+        "Python",
+        "Gemini API",
+        "PyMuPDF",
+        "edge-tts",
+        "Gemini TTS"
+      ],
+      "featured": false,
+      "createdAt": "2026-10-16"
+    },
+    {
       "id": "impostor-app",
       "name": "Impostor",
       "description": "Juego de fiesta para Android en el que los jugadores deben descubrir quién es el impostor. Funciona 100 % offline con un solo móvil que se pasa de mano en mano, tiene dos modos de juego y un dataset propio de 1.421 pares de palabras en 8 categorías.",
