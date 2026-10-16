@@ -1,112 +1,189 @@
 {
   "projects": [
     {
+      "id": "impostor-app",
+      "name": "Impostor",
+      "description": "Juego de fiesta para Android en el que los jugadores deben descubrir quién es el impostor. Funciona 100 % offline con un solo móvil que se pasa de mano en mano, tiene dos modos de juego y un dataset propio de 1.421 pares de palabras en 8 categorías.",
+      "repositoryUrl": "https://github.com/davilex7/Impostor",
+      "previewImage": "/previews/logo_impostor.png",
+      "previewType": "image",
+      "technologies": [
+        "Android",
+        "Kotlin",
+        "Jetpack Compose",
+        "Room",
+        "Hilt"
+      ],
+      "featured": false,
+      "createdAt": "2026-04-26"
+    },
+    {
       "id": "vesta-app",
       "name": "Vesta",
       "description": "Vesta es una aplicación Android diseñada para tener una lista de la compra online sincronizada en tiempo real. De este modo, todos los cohabitantes de una casa pueden saber siempre lo que deben comprar al pasar por una tienda.",
       "repositoryUrl": "https://github.com/davilex7/Vesta",
       "previewImage": "/previews/logo_vesta.png",
       "previewType": "image",
-      "technologies": ["Android", "Kotlin", "Jetpack Compose", "Firebase", "APIs"],
+      "technologies": [
+        "Android",
+        "Kotlin",
+        "Jetpack Compose",
+        "Firebase",
+        "APIs"
+      ],
       "featured": false,
       "createdAt": "2026-01-12"
     },
-	{
+    {
       "id": "translator-on-the-fly",
       "name": "Translator on the Fly",
       "description": "Translator on the Fly es una extensión para Chrome que permite traducir texto en imágenes en tiempo real.",
       "repositoryUrl": "https://github.com/davilex7/translator-on-the-fly",
       "previewImage": "/previews/logo_TotF.png",
       "previewType": "image",
-      "technologies": ["JavaScript", "HTML5", "TailwindCSS", "Python", "Service Worker", "Flask", "EasyOCR", "MyMemory"],
+      "technologies": [
+        "JavaScript",
+        "HTML5",
+        "TailwindCSS",
+        "Python",
+        "Service Worker",
+        "Flask",
+        "EasyOCR",
+        "MyMemory"
+      ],
       "featured": false,
       "createdAt": "2025-04-25"
     },
-	{
+    {
       "id": "manga-chapter-tracker",
       "name": "Manga Chapter Tracker",
       "description": "Manga Chapter Tracker es una aplicación para mantener un registro de los mangas, manhwas o manhuas que lees. Permite actualización automática de los episodios de los mangas registrados.",
       "repositoryUrl": "https://github.com/davilex7/Manga-Chapter-Tracker",
       "previewImage": "/previews/logo_manga_tracker.png",
       "previewType": "image",
-      "technologies": ["NextJS", "TailwindCSS", "ShadCN UI", "TypeScript", "JSON", "WebScraping"],
+      "technologies": [
+        "NextJS",
+        "TailwindCSS",
+        "ShadCN UI",
+        "TypeScript",
+        "JSON",
+        "WebScraping"
+      ],
       "featured": false,
       "createdAt": "2025-04-9"
     },
-	{
+    {
       "id": "series-tracker",
       "name": "Series Tracker",
       "description": "Series Tracker es una aplicación para mantener un registro de las series y películas que ves. Permite actualización automática de información e incluye sistema de recomendación y de valoración.",
       "repositoryUrl": "https://github.com/davilex7/series-tracker",
       "previewImage": "/previews/logo_series_tracker.png",
       "previewType": "image",
-      "technologies": ["NextJS", "TailwindCSS", "ShadCN UI", "TypeScript", "JSON", "APIs"],
+      "technologies": [
+        "NextJS",
+        "TailwindCSS",
+        "ShadCN UI",
+        "TypeScript",
+        "JSON",
+        "APIs"
+      ],
       "featured": false,
       "createdAt": "2025-04-16"
     },
-	{
+    {
       "id": "global-eye",
       "name": "GlobalEye",
       "description": "GlobalEye es una aplicación de escritorio que permite traducir el texto extraido de imágenes de un area seleccionada.",
       "repositoryUrl": "https://github.com/davilex7/GlobalEye",
       "previewImage": "/previews/logo_GlobalEye.png",
       "previewType": "image",
-      "technologies": ["Node.js", "JavaScript", "HTML5", "Tesseract.js", "Electron", "APIs"],
+      "technologies": [
+        "Node.js",
+        "JavaScript",
+        "HTML5",
+        "Tesseract.js",
+        "Electron",
+        "APIs"
+      ],
       "featured": false,
       "createdAt": "2025-04-26"
     },
-	{
+    {
       "id": "the-hub",
       "name": "The Hub",
       "description": "The Hub es un centro de control personal para mostrar y organizar tus proyectos de desarrollo. Como un portfolio interactivo.",
       "repositoryUrl": "https://github.com/davilex7/The_Hub",
       "previewImage": "/previews/logo_TH.png",
       "previewType": "image",
-      "technologies": ["Astro", "React", "TypeScript", "CSS3", "JSON"],
+      "technologies": [
+        "Astro",
+        "React",
+        "TypeScript",
+        "CSS3",
+        "JSON"
+      ],
       "featured": false,
       "createdAt": "2026-01-18"
     },
-	{
+    {
       "id": "stream-speed-companion",
       "name": "Stream Speed Companion",
       "description": "Controla la velocidad de cualquier video HTML5 que veas.",
       "repositoryUrl": "https://github.com/davilex7/stream-speed-companion",
       "previewImage": "/previews/logo_ssc.png",
       "previewType": "image",
-      "technologies": ["JavaScript", "HTML5", "CSS3"],
+      "technologies": [
+        "JavaScript",
+        "HTML5",
+        "CSS3"
+      ],
       "featured": false,
       "createdAt": "2025-04-26"
     },
-	{
+    {
       "id": "protocolo-tirano",
       "name": "Protocolo Tirano",
       "description": "Arbitro digital para determinar el jugador más versatil.",
       "repositoryUrl": "https://github.com/davilex7/Protocolo-Tirano",
       "previewImage": "/previews/logo_PT.png",
       "previewType": "image",
-      "technologies": ["JavaScript", "HTML5", "CSS3", "MongoDB", "Render"],
+      "technologies": [
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "MongoDB",
+        "Render"
+      ],
       "featured": false,
       "createdAt": "2025-06-07"
     },
-	{
+    {
       "id": "pokemon-types-learning",
       "name": "Pokemon Types Learning",
       "description": "Aplicación web interactiva diseñada para ayudarte a memorizar y dominar la tabla de tipos Pokemon.",
       "repositoryUrl": "https://github.com/davilex7/PokemonTypesLearning",
       "previewImage": "/previews/logo_pokemon.png",
       "previewType": "image",
-      "technologies": ["JavaScript", "HTML5", "TailwindCSS"],
+      "technologies": [
+        "JavaScript",
+        "HTML5",
+        "TailwindCSS"
+      ],
       "featured": false,
       "createdAt": "2025-12-12"
     },
-	{
+    {
       "id": "chess-opening-learning",
       "name": "Chess Opening Learning",
       "description": "Aplicación web interactiva diseñada para ayudarte a dominar las aperturas de ajedrez mediante práctica repetitiva inteligente.",
       "repositoryUrl": "https://github.com/davilex7/ChessOpeningLearning",
       "previewImage": "/previews/logo_Chess.png",
       "previewType": "image",
-      "technologies": ["JavaScript", "HTML5", "TailwindCSS"],
+      "technologies": [
+        "JavaScript",
+        "HTML5",
+        "TailwindCSS"
+      ],
       "featured": false,
       "createdAt": "2025-07-13"
     }
