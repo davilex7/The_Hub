@@ -13,7 +13,7 @@
 
 *Un dashboard de portfolio con layout masonry y drag-and-drop, construido siguiendo los mas altos estandares de desarrollo de software.*
 
-[Reportar Bug](https://github.com/UO291047/The_Hub/issues) · [Solicitar Feature](https://github.com/UO291047/The_Hub/issues)
+[Reportar Bug](https://github.com/davilex7/The_Hub/issues) · [Solicitar Feature](https://github.com/davilex7/The_Hub/issues)
 
 <br />
 
@@ -390,7 +390,7 @@ Button    ProjectCard   ProjectGrid   Dashboard   index.astro
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/UO291047/The_Hub.git
+git clone https://github.com/davilex7/The_Hub.git
 
 # 2. Entrar al directorio
 cd The_Hub
